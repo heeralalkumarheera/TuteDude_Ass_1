@@ -4,8 +4,8 @@ import json
 
 app = Flask(__name__)
 
-# MongoDB Connection (TuteDude DB)
-client = MongoClient("mongodb+srv://heeralalkumarheera_db_user:Heera%401234@campuseventhub.kzgxjc0.mongodb.net/?appName=CampusEventHub")
+# 🔥 MongoDB Connection (TuteDude DB)
+client = MongoClient("Set_YOUR_own_MONGODB_STRING_Here")
 db = client["TuteDude"]
 collection = db["formdata"]
 
@@ -16,7 +16,7 @@ def get_data():
         data = json.load(file)
     return jsonify(data)
 
-# Question 2 Form
+# Question 2 Form 
 @app.route('/')
 def home():
     return render_template('form.html')
