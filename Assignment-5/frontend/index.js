@@ -22,7 +22,7 @@ app.post('/submit', async (req, res) => {
     const { name, email } = req.body;
 
     try {
-        const response = await axios.post('http://backend:5000/api', {
+        const response = await axios.post('http://backend-service:5000', {
             name: name,
             email: email
         });
